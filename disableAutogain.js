@@ -37,8 +37,12 @@
             if (constraints.audio.optional || constraints.audio.mandatory) {
                 setLegacyChromeConstraint(constraints.audio, "googAutoGainControl", false);
                 setLegacyChromeConstraint(constraints.audio, "googAutoGainControl2", false);
+                setLegacyChromeConstraint(constraints.audio, "googEchoCancellation", false);
+                console.log("googAutoGainControlx, googEchoCancellation: disabled");
             } else {
                 setConstraint(constraints.audio, "autoGainControl", false);
+                setConstraint(constraints.audio, "echoCancellation", false);
+                console.log("autoGainControl, echoCancellation: disabled");
             }
         }
     }
